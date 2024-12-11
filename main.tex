@@ -1,16 +1,31 @@
-\documentclass[11pt,a4paper]{ltjarticle}
+\documentclass[12pt,a4paper]{ltjarticle}
+
 \usepackage{unicode-math}
 \usepackage{luatexja-fontspec}
-\usepackage{luatexja-preset}
+\setmainfont{STIX Two Text}
+\setmathfont{STIX Two Math}
+\setmainjfont[BoldFont=IPAGothic]{BIZUDMincho-Regular}
 
 \usepackage{natbib}
 
-\usepackage{graphicx}
-\usepackage{color}
+\usepackage{geometry}   % ページレイアウトの設定
+\usepackage{ulem}       % 下線や取り消し線のサポート
+\usepackage{graphicx}   % 画像の挿入および操作
+\usepackage{caption}    % 図や表のキャプションのカスタマイズ
+\usepackage{color}      % 文字や背景の色付け
+\usepackage{setspace}   % 行間の設定
+\usepackage{comment}    % コメントアウト用環境
+\usepackage{footmisc}   % 脚注のカスタマイズ
+\usepackage{pdflscape}  % PDF上でページを横向きにする
+\usepackage{subfigure}  % サブフィギュアの挿入
+\usepackage{array}      % 表のカスタマイズ
+
 \definecolor{MyBrown}{rgb}{0.3,0,0}
 \definecolor{MyBlue}{rgb}{0,0,0.3}
 \definecolor{MyRed}{rgb}{0.6,0,0.1}
 \definecolor{MyGreen}{rgb}{0,0.4,0}
+
+\geometry{left=1.0in,right=1.0in,top=1.0in,bottom=1.0in}
 
 %% hyperref
 \usepackage[%
@@ -23,15 +38,47 @@ filecolor=MyBlue,%
 urlcolor=MyGreen%
 ]{hyperref}
 
-\title{タイトル}
+\renewcommand{\abstractname}{要約}
 
-\author{著者}
-\date{\today}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
+
 
 \begin{document}
 
+\begin{titlepage}
+\title{タイトル\thanks{謝辞}}
+\author{著林者太郎\thanks{所属大学所属学部}}
+\date{\today}
 \maketitle
+\begin{abstract}
+\noindent 本要約は、特定の内容を説明するものではなく、あくまでテンプレートとしての役割を果たすことを目的としている。そのため、具体的な事例やデータ、分析結果は一切含まれておらず、あたかも意味がありそうに見える文章構成で構成されている。要点や結論らしきものが示されているように見えるが、実際には何も主張していない。適度に抽象的な表現を用いることで、どのようなテーマにも適用可能な汎用性を意図している。今後この要約は、テンプレートを用いて執筆する論文の内容に合わせ、適宜修正されることが期待される。\\
+\vspace{0in}\\
+\noindent\textbf{キーワード:} key1, key2, key3\\
+\vspace{0in}\\
+\noindent\textbf{JELコード:} key1, key2, key3\\
 
+\bigskip
+\end{abstract}
+\setcounter{page}{0}
+\thispagestyle{empty}
+\end{titlepage}
+\pagebreak \newpage
+
+
+
+\section{序論}
+
+\section{先行研究}
+
+\section{モデル}
+
+\section{データ}
+
+\section{推定結果}
+
+\section{結論}
 
 \bibliographystyle{jecon}
 
