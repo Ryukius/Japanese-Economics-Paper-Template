@@ -1,81 +1,40 @@
-\documentclass[10.5pt, a4paper]{bxjsarticle}
-
-\usepackage{fontspec}
-\usepackage{zxjatype}
-
-\setjamainfont{ipam.ttf}
-\setjasansfont{ipag.ttf}
-\setjamonofont{ipag.ttf}
+\documentclass[11pt,a4paper]{ltjarticle}
+\usepackage{unicode-math}
+\usepackage{luatexja-fontspec}
+\usepackage{luatexja-preset}
 
 \usepackage{natbib}
 
-\usepackage{amsmath,amssymb,amsfonts}
-\usepackage{bm}
-\usepackage{siunitx}
-\usepackage{indentfirst} %自動的に字下げしてくれるパッケージ
+\usepackage{graphicx}
+\usepackage{color}
+\definecolor{MyBrown}{rgb}{0.3,0,0}
+\definecolor{MyBlue}{rgb}{0,0,0.3}
+\definecolor{MyRed}{rgb}{0.6,0,0.1}
+\definecolor{MyGreen}{rgb}{0,0.4,0}
 
- \usepackage[stable]{footmisc}
-
-\usepackage{mathrsfs}
-
-\newcommand{\E}{\mathrm{E}}
-
-\renewcommand{\abstractname}{要約}
-
-%脚注の様式
-\renewcommand{\thefootnote}{\arabic{footnote}}
-
-%図用のパッケージ
-\usepackage{booktabs}
-\usepackage{caption} %表注をつけるため
-\usepackage[flushleft]{threeparttable}
-\usepackage{graphicx} %図に複数行にわたる注をつけるため
-
-\usepackage{dcolumn}
-\usepackage{lscape} %図を横にするパッケージ
-
-%参考文献を引用する用のパッケージ
-\usepackage[colorlinks=true, bookmarks=true,
-bookmarksnumbered=true, bookmarkstype=toc, linkcolor=blue,
-urlcolor=blue, citecolor=blue]{hyperref}
-
+%% hyperref
+\usepackage[%
+bookmarks=true,%
+bookmarksnumbered=true,%
+colorlinks=true,%
+linkcolor=MyBlue,%
+citecolor=MyRed,%
+filecolor=MyBlue,%
+urlcolor=MyGreen%
+]{hyperref}
 
 \title{タイトル}
-\subtitle{サブタイトル}
+
 \author{著者}
-\date{}
+\date{\today}
 
 \begin{document}
 
 \maketitle
 
-% \include{abstract} 別ファイルで各章を作る
-
-%% 目次
-%\tableofcontents
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%  本文
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \include{introduction}
-% \include{industry_overview}
-% \include{literature}
-% \include{model}
-% \include{data}
-% \include{result}
-% \include{conclusion}
-
-\appendix
-\include{data_appendix}
-
-%\include{acknowledgments}
 
 \bibliographystyle{jecon}
 
-%notice{論文key}で引用外の文献も引用できる
 \bibliography{bibliography.bib}
-
-% \nocite{}
 
 \end{document}
