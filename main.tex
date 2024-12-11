@@ -4,7 +4,7 @@
 \usepackage{luatexja-fontspec}
 \setmainfont{STIX Two Text}
 \setmathfont{STIX Two Math}
-\setmainjfont[BoldFont=IPAGothic]{IPAMincho}
+\setmainjfont[BoldFont=IPAGothic]{BIZUDMincho-Regular}
 
 \usepackage{natbib}
 
@@ -17,6 +17,8 @@
 \usepackage{comment}    % コメントアウト用環境
 \usepackage{footmisc}   % 脚注のカスタマイズ
 \usepackage{subcaption} 
+\usepackage{indentfirst}
+% \usepackage{pdflscape}
 
 \definecolor{MyBrown}{rgb}{0.3,0,0}
 \definecolor{MyBlue}{rgb}{0,0,0.3}
@@ -36,7 +38,8 @@ filecolor=MyBlue,%
 urlcolor=MyGreen%
 ]{hyperref}
 
-\geometry{left=1.0in,right=1.0in,top=1.0in,bottom=1.0in}
+\newcommand{\red}[1]{{\color{red} #1}}
+\newcommand{\blue}[1]{{\color{blue} #1}}
 
 \renewcommand{\abstractname}{要約}
 
@@ -48,7 +51,7 @@ urlcolor=MyGreen%
 \date{\today}
 \maketitle
 \begin{abstract}
-\noindent 本要約は、特定の内容を説明するものではなく、あくまでテンプレートとしての役割を果たすことを目的としている。そのため、具体的な事例やデータ、分析結果は一切含まれておらず、あたかも意味がありそうに見える文章構成で構成されている。要点や結論らしきものが示されているように見えるが、実際には何も主張していない。適度に抽象的な表現を用いることで、どのようなテーマにも適用可能な汎用性を意図している。今後この要約は、テンプレートを用いて執筆する論文の内容に合わせ、適宜修正されることが期待される。\\
+ 本要約は、特定の内容を説明するものではなく、あくまでテンプレートとしての役割を果たすことを目的としている。そのため、具体的な事例やデータ、分析結果は一切含まれておらず、あたかも意味がありそうに見える文章構成で構成されている。要点や結論らしきものが示されているように見えるが、実際には何も主張していない。適度に抽象的な表現を用いることで、どのようなテーマにも適用可能な汎用性を意図している。今後この要約は、テンプレートを用いて執筆する論文の内容に合わせ、適宜修正されることが期待される。\\
 \vspace{0in}\\
 \noindent\textbf{キーワード:} key1, key2, key3\\
 \vspace{0in}\\
