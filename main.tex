@@ -4,7 +4,7 @@
 \usepackage{luatexja-fontspec}
 \setmainfont{STIX Two Text}
 \setmathfont{STIX Two Math}
-\setmainjfont[BoldFont=IPAGothic]{BIZUDMincho-Regular}
+\setmainjfont[BoldFont=IPAGothic]{IPAMincho}
 
 \usepackage{natbib}
 
@@ -16,9 +16,7 @@
 \usepackage{setspace}   % 行間の設定
 \usepackage{comment}    % コメントアウト用環境
 \usepackage{footmisc}   % 脚注のカスタマイズ
-\usepackage{pdflscape}  % PDF上でページを横向きにする
-\usepackage{subfigure}  % サブフィギュアの挿入
-\usepackage{array}      % 表のカスタマイズ
+\usepackage{subcaption} 
 
 \definecolor{MyBrown}{rgb}{0.3,0,0}
 \definecolor{MyBlue}{rgb}{0,0,0.3}
@@ -37,15 +35,6 @@ citecolor=MyRed,%
 filecolor=MyBlue,%
 urlcolor=MyGreen%
 ]{hyperref}
-
-\newcolumntype{L}[1]{>{\raggedright\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{C}[1]{>{\centering\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{R}[1]{>{\raggedleft\let\newline\\arraybackslash\hspace{0pt}}m{#1}}
-
-\normalem
-
-\newcommand{\red}[1]{{\color{red} #1}}
-\newcommand{\blue}[1]{{\color{blue} #1}}
 
 \geometry{left=1.0in,right=1.0in,top=1.0in,bottom=1.0in}
 
@@ -72,8 +61,6 @@ urlcolor=MyGreen%
 \end{titlepage}
 \pagebreak \newpage
 
-
-
 \section{序論}
 
 \section{先行研究}
@@ -88,6 +75,6 @@ urlcolor=MyGreen%
 
 \bibliographystyle{jecon}
 
-\bibliography{bibliography.bib}
+\bibliography{bibliography}
 
 \end{document}
