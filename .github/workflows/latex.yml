@@ -1,0 +1,51 @@
+name: Build LaTeX
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  book:
+    name: Book (uplatex + biber)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install TeX Live minimal
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            texlive-latex-recommended texlive-latex-extra \
+            texlive-fonts-recommended texlive-lang-cjk \
+            latexmk biber biblatex fonts-bizud-gothic fonts-bizud-mincho
+      - name: Build book
+        run: |
+          latexmk -synctex=1 -interaction=nonstopmode -file-line-error main.tex
+      - name: Upload PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: thesis
+          path: main.pdf
+
+  chapter2:
+    name: Chapter 2 (lualatex + biber)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: chapters
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install TeX Live minimal
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            texlive-latex-recommended texlive-latex-extra \
+            texlive-fonts-recommended texlive-lang-cjk \
+            latexmk biber biblatex fonts-noto-cjk
+      - name: Build chapter2
+        run: |
+          latexmk -lualatex -synctex=1 -interaction=nonstopmode -file-line-error chapter2.tex
+      - name: Upload PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: chapter2
+          path: chapters/chapter2.pdf

@@ -1,0 +1,15 @@
+{
+  "name": "japanese-economics-paper",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "latex-dev",
+  "workspaceFolder": "/work",
+  "settings": {
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.message.warning.show": false
+  },
+  "extensions": [
+    "James-Yu.latex-workshop"
+  ],
+  "remoteUser": "root",
+  "postCreateCommand": "echo 'Container is ready!'"
+}

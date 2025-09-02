@@ -1,0 +1,55 @@
+% ===== LuaLaTeX（メイン）=====
+\usepackage{unicode-math}
+\usepackage{luatexja-fontspec}
+
+% ローカルのBIZUDフォントを使用（推奨）
+\setmainfont{Latin Modern Roman}
+\setmathfont{Latin Modern Math}
+\setmainjfont[BoldFont=BIZUDGothic-Bold]{BIZUDMincho-Regular}[Path=./fonts/]
+
+% システムデフォルトフォントを使用したい場合は、上記3行をコメントアウトして以下を使用
+% \setmainfont{Latin Modern Roman}
+% \setmathfont{Latin Modern Math}
+% \setmainjfont[BoldFont=IPAGothic]{IPAMincho}
+
+% スタイルファイルのパスを設定
+\makeatletter
+\def\input@path{{styles/}}
+\makeatother
+
+\usepackage{natbib}
+
+\usepackage{geometry}   % ページレイアウトの設定
+\usepackage{ulem}       % 下線や取り消し線のサポート
+\usepackage{graphicx}   % 画像の挿入および操作
+\usepackage{caption}    % 図や表のキャプションのカスタマイズ
+\usepackage{color}      % 文字や背景の色付け
+\usepackage{setspace}   % 行間の設定
+\usepackage{comment}    % コメントアウト用環境
+\usepackage{footmisc}   % 脚注のカスタマイズ
+\usepackage{subcaption} 
+\usepackage{indentfirst}
+% \usepackage{pdflscape}
+
+\definecolor{MyBrown}{rgb}{0.3,0,0}
+\definecolor{MyBlue}{rgb}{0,0,0.3}
+\definecolor{MyRed}{rgb}{0.6,0,0.1}
+\definecolor{MyGreen}{rgb}{0,0.4,0}
+
+\geometry{left=1.0in,right=1.0in,top=1.0in,bottom=1.0in}
+
+%% hyperref
+\usepackage[%
+bookmarks=true,%
+bookmarksnumbered=true,%
+colorlinks=true,%
+linkcolor=MyBlue,%
+citecolor=MyRed,%
+filecolor=MyBlue,%
+urlcolor=MyGreen%
+]{hyperref}
+
+\newcommand{\red}[1]{{\color{red} #1}}
+\newcommand{\blue}[1]{{\color{blue} #1}}
+
+\renewcommand{\abstractname}{要約}
