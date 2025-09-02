@@ -9,8 +9,7 @@ Cursor を使用して作りました。
 - **LuaLaTeX**: 日本語対応のLaTeXエンジン
 - **経済学論文向け**: jecon.bstスタイルファイルを使用
 - **自動ビルド**: VSCodeのLaTeX Workshopで自動コンパイル
-- **GitHub Actions**: CI/CDで自動ビルドとPDFアップロード
-- **BIZUDフォント**: 美しい日本語フォント（BIZUDMincho/BIZUDGothic）
+- **BIZUDフォント**: 視認性の高い日本語フォント（BIZUDMincho/BIZUDGothic）
 
 ## 使用方法
 
@@ -22,7 +21,7 @@ Cursor を使用して作りました。
 ## フォント設定
 
 ### BIZUDフォント（推奨・デフォルト）
-このテンプレートは、美しい日本語フォントであるBIZUDフォントを使用するように設定されています。
+このテンプレートは、視認性の高い日本語フォントであるBIZUDフォントを使用するように設定されています。
 - **日本語**: BIZUDMincho-Regular（明朝体）
 - **日本語太字**: BIZUDGothic-Bold（ゴシック体）
 - **英語・数式**: Latin Modern（システムフォント）
@@ -46,7 +45,6 @@ BIZUDフォントを使用したくない場合は、`preamble.tex`のコメン�
   - `jplain.bst`
 - `.devcontainer/`: Docker環境設定
 - `.vscode/`: VSCode設定
-- `.github/workflows/`: GitHub Actions設定
 
 ## 参考
 
