@@ -1,3 +1,6 @@
+# !作業中です!
+
+
 # 日本語経済学論文テンプレート (Docker + VS Code版)
 
 このテンプレートは、[Ryukius/Japanese-Economics-Paper-Template](https://github.com/Ryukius/Japanese-Economics-Paper-Template)をベースに、Docker + VS Code (Cursor)環境で使用するために調整したものです。
